@@ -4,7 +4,7 @@
 sleep 10
 
 # Check the HTTP status code
-response=$(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:7001)
+response=$(curl -o /dev/null -s -w "%{http_code}\n" http://cowsay_container11:8080)
 
 # Compare the response code
 if [ "$response" -ne 200 ]; then
